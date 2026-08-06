@@ -399,6 +399,33 @@
       border-color: var(--accent-orange);
     }
 
+    .btn-toggle-vectors {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      background: #18181b;
+      border: 1px solid var(--accent-orange);
+      border-radius: 9999px;
+      color: var(--accent-orange);
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-toggle-vectors:hover {
+      background: rgba(255, 140, 0, 0.2);
+    }
+
+    .btn-toggle-vectors.active {
+      background: var(--accent-orange);
+      color: #000000;
+      font-weight: 600;
+      box-shadow: 0 0 15px var(--accent-orange-glow);
+    }
+
     select.custom-select {
       padding: 0.5rem 1rem;
       background: #09090b;
@@ -920,6 +947,13 @@
           </select>
         </div>
 
+        <button id="btn-toggle-lines" class="btn-toggle-vectors" onclick="toggleSeasoningLines()">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+          </svg>
+          <span id="lines-btn-text">Connect Seasoning Vectors (Green ➔ Air-Dried)</span>
+        </button>
+
         <div style="margin-left: auto; color: var(--accent-orange); font-size: 0.88rem; font-weight: 300;">
           💡 Click legend items to toggle series • Click scatter point for species details
         </div>
@@ -959,6 +993,67 @@
     let searchTerm = '';
     let currentFiltered = [...DATA];
     let scatterChart = null;
+    let showSeasoningLines = false;
+
+    // Custom Chart.js Plugin to draw Seasoning Vector lines between Green & Air-Dried pairs
+    const seasoningLinesPlugin = {
+      id: 'seasoningLinesPlugin',
+      beforeDatasetsDraw(chart, args, options) {
+        if (!showSeasoningLines) return;
+        const ctx = chart.ctx;
+        const xProp = document.getElementById('x-axis-select').value;
+        const yProp = document.getElementById('y-axis-select').value;
+
+        // Group points by Common Name + Botanical Name + Origin
+        const groups = {};
+        currentFiltered.forEach(d => {
+          const key = (d.species_common_name || '') + '|' + (d.species_botanical_name || '') + '|' + (d.origin || '');
+          if (!groups[key]) groups[key] = {};
+          if (d.condition === 'G.') groups[key].green = d;
+          if (d.condition === 'A.D.') groups[key].ad = d;
+        });
+
+        ctx.save();
+        ctx.lineWidth = 1.5;
+
+        Object.values(groups).forEach(g => {
+          if (g.green && g.ad) {
+            const xG = getPropertyValue(g.green, xProp);
+            const yG = getPropertyValue(g.green, yProp);
+            const xAD = getPropertyValue(g.ad, xProp);
+            const yAD = getPropertyValue(g.ad, yProp);
+
+            if (xG !== null && yG !== null && xAD !== null && yAD !== null) {
+              const pixelX1 = chart.scales.x.getPixelForValue(xG);
+              const pixelY1 = chart.scales.y.getPixelForValue(yG);
+              const pixelX2 = chart.scales.x.getPixelForValue(xAD);
+              const pixelY2 = chart.scales.y.getPixelForValue(yAD);
+
+              const isSoftwood = g.green.class.includes('Softwood');
+              ctx.strokeStyle = isSoftwood ? 'rgba(255, 255, 255, 0.4)' : 'rgba(255, 140, 0, 0.55)';
+              ctx.setLineDash([4, 4]); // Dashed line vector
+
+              ctx.beginPath();
+              ctx.moveTo(pixelX1, pixelY1);
+              ctx.lineTo(pixelX2, pixelY2);
+              ctx.stroke();
+            }
+          }
+        });
+
+        ctx.restore();
+      }
+    };
+
+    // Register plugin
+    Chart.register(seasoningLinesPlugin);
+
+    window.toggleSeasoningLines = function() {
+      showSeasoningLines = !showSeasoningLines;
+      const btn = document.getElementById('btn-toggle-lines');
+      btn.classList.toggle('active', showSeasoningLines);
+      if (scatterChart) scatterChart.update();
+    };
 
     // Elements
     const tableBody = document.getElementById('table-body');
@@ -997,7 +1092,7 @@
     };
 
     // Event Listeners for Filters
-    document.querySelectorAll('.pill').forEach(btn => {
+    document.querySelectorAll('.pill[data-filter-type]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const group = btn.dataset.filterType;
         const val = btn.dataset.value;
