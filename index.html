@@ -921,7 +921,7 @@
         </div>
 
         <div style="margin-left: auto; color: var(--accent-orange); font-size: 0.88rem; font-weight: 300;">
-          💡 Click on any scatter point to view full species details modal
+          💡 Click legend items to toggle series • Click scatter point for species details
         </div>
       </div>
 
@@ -1163,23 +1163,26 @@
       const xProp = document.getElementById('x-axis-select').value;
       const yProp = document.getElementById('y-axis-select').value;
 
-      const softwoodsPoints = [];
-      const hardwoodsPoints = [];
+      const softwoodsAD = [];
+      const softwoodsGreen = [];
+      const hardwoodsAD = [];
+      const hardwoodsGreen = [];
 
       currentFiltered.forEach(d => {
         const xVal = getPropertyValue(d, xProp);
         const yVal = getPropertyValue(d, yProp);
 
         if (xVal !== null && yVal !== null && typeof xVal === 'number' && typeof yVal === 'number') {
-          const pt = {
-            x: xVal,
-            y: yVal,
-            item: d
-          };
-          if (d.class.includes('Softwood')) {
-            softwoodsPoints.push(pt);
+          const pt = { x: xVal, y: yVal, item: d };
+          const isSoftwood = d.class.includes('Softwood');
+          const isGreen = d.condition === 'G.';
+
+          if (isSoftwood) {
+            if (isGreen) softwoodsGreen.push(pt);
+            else softwoodsAD.push(pt);
           } else {
-            hardwoodsPoints.push(pt);
+            if (isGreen) hardwoodsGreen.push(pt);
+            else hardwoodsAD.push(pt);
           }
         }
       });
@@ -1193,21 +1196,43 @@
         data: {
           datasets: [
             {
-              label: 'Softwoods',
-              data: softwoodsPoints,
-              backgroundColor: 'rgba(255, 255, 255, 0.85)', // White for Softwoods
+              label: 'Softwoods (Air-Dried ●)',
+              data: softwoodsAD,
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
               borderColor: '#ffffff',
+              pointStyle: 'circle',
               pointRadius: 6,
               pointHoverRadius: 10,
               pointHoverBackgroundColor: 'rgb(255, 140, 0)'
             },
             {
-              label: 'Hardwoods',
-              data: hardwoodsPoints,
-              backgroundColor: 'rgba(255, 140, 0, 0.85)', // Orange (255, 140, 0) for Hardwoods
+              label: 'Softwoods (Green ▲)',
+              data: softwoodsGreen,
+              backgroundColor: 'rgba(255, 255, 255, 0.75)',
+              borderColor: '#ffffff',
+              pointStyle: 'triangle',
+              pointRadius: 8,
+              pointHoverRadius: 12,
+              pointHoverBackgroundColor: 'rgb(255, 140, 0)'
+            },
+            {
+              label: 'Hardwoods (Air-Dried ●)',
+              data: hardwoodsAD,
+              backgroundColor: 'rgba(255, 140, 0, 0.9)',
               borderColor: 'rgb(255, 140, 0)',
+              pointStyle: 'circle',
               pointRadius: 6,
               pointHoverRadius: 10,
+              pointHoverBackgroundColor: '#ffffff'
+            },
+            {
+              label: 'Hardwoods (Green ▲)',
+              data: hardwoodsGreen,
+              backgroundColor: 'rgba(255, 140, 0, 0.75)',
+              borderColor: 'rgb(255, 140, 0)',
+              pointStyle: 'triangle',
+              pointRadius: 8,
+              pointHoverRadius: 12,
               pointHoverBackgroundColor: '#ffffff'
             }
           ]
@@ -1230,7 +1255,8 @@
             legend: {
               labels: {
                 color: '#f4f4f5',
-                font: { family: 'Work Sans', size: 14, weight: '400' }
+                usePointStyle: true,
+                font: { family: 'Work Sans', size: 13, weight: '400' }
               }
             },
             tooltip: {
@@ -1244,7 +1270,8 @@
               callbacks: {
                 title: function(context) {
                   const item = context[0].raw.item;
-                  return item.species_common_name + ' (' + item.condition + ')';
+                  const condStr = item.condition === 'G.' ? 'Green (unseasoned)' : 'Air-Dried (12% MC)';
+                  return item.species_common_name + ' • ' + condStr;
                 },
                 label: function(context) {
                   const item = context.raw.item;
