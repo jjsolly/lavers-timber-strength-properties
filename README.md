@@ -14,7 +14,7 @@ This repository digitizes two primary technical publications from the Building R
 1. 📘 **1983 Master Report**:  
    [*The Strength Properties of Timber*](https://bregroup.com/store/bookshop/the-strength-properties-of-timber)  
    **BRE Report BR 241** (3rd Edition), by Gwendoline M. Lavers, revised by G.L. Moore. Garston, BRE, 1983.  
-   *Contains standard small clear specimen ($20 \times 20\text{ mm}$) test data for 435 Green and Air-Dried test condition records across 223 timber species and growth location lots.*
+   *Contains standard small clear specimen (20 × 20 mm) test data for 435 Green and Air-Dried test condition records across 223 timber species and growth location lots.*
 
 2. 📙 **1997 Supplement**:  
    [*The Strength Properties of Timber: 1997 Supplement*](https://bregroup.com/store/bookshop/the-strength-properties-of-timber-1997-supplement)  
