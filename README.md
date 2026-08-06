@@ -26,7 +26,7 @@ This repository digitizes two primary technical publications from the Building R
 ## Key Stats
 
 - **447 Total Test Condition Records**: Digitized with full statistical metrics (Mean, Standard Deviation, and Sample Count $n$) for all physical and mechanical properties.
-- **191 Unique Common Species**: 186 original species from Lavers (1983) plus **5 new commercial species** introduced in the 1997 Supplement (*Andiroba*, *Bintangor*, *Kamarare*, *Taun*, *Vitex*).
+- **191 Unique Common Species**: 186 original species from Lavers (1983) plus 5 new commercial species introduced in the 1997 Supplement (*Andiroba*, *Bintangor*, *Kamarare*, *Taun*, *Vitex*).
 - **Explicit Source Metadata**: Every JSON record contains a dedicated `dataset_source` attribute identifying its origin publication (`"1983 BRE Report (Lavers)"` or `"1997 BRE Supplement (Maun & Coday)"`).
 
 ---
