@@ -1,0 +1,530 @@
+[
+  {
+    "id": "S01",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Andiroba",
+    "species_botanical_name": "Carapa guianensis",
+    "origin": "South America",
+    "condition": "A.D.",
+    "notes": "Lesser known species from S America; commercial supply, part kilned at BRE",
+    "moisture_content_pct": 10.7,
+    "density_12mc_kg_m3": 624,
+    "density_12mc_std": 49.9,
+    "density_12mc_n": 40,
+    "specific_gravity": {
+      "mean": 0.563,
+      "std": 0.044,
+      "n": 40
+    },
+    "static_bending_mor_mpa": {
+      "mean": 108,
+      "std": 16.3,
+      "n": 40
+    },
+    "static_bending_moe_mpa": {
+      "mean": 11500,
+      "std": 1180,
+      "n": 40
+    },
+    "compression_parallel_mpa": {
+      "mean": 59.4,
+      "std": 4.56,
+      "n": 40
+    },
+    "impact_drop_height_m": {
+      "mean": 0.781,
+      "std": 0.178,
+      "n": 40
+    },
+    "hardness_side_grain_n": {
+      "mean": 5640,
+      "std": 1190,
+      "n": 78
+    }
+  },
+  {
+    "id": "S02",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Bintangor",
+    "species_botanical_name": "Calophyllum spp.",
+    "origin": "Papua New Guinea",
+    "condition": "A.D.",
+    "notes": "Known as calophyllum in PNG; lesser known timber, part kilned at BRE",
+    "moisture_content_pct": 13.4,
+    "density_12mc_kg_m3": 595,
+    "density_12mc_std": 44.6,
+    "density_12mc_n": 40,
+    "specific_gravity": {
+      "mean": 0.52,
+      "std": 0.039,
+      "n": 40
+    },
+    "static_bending_mor_mpa": {
+      "mean": 85,
+      "std": 13.6,
+      "n": 34
+    },
+    "static_bending_moe_mpa": {
+      "mean": 9400,
+      "std": 1200,
+      "n": 34
+    },
+    "compression_parallel_mpa": {
+      "mean": 49.1,
+      "std": 4.0,
+      "n": 40
+    },
+    "impact_drop_height_m": {
+      "mean": 0.72,
+      "std": 0.241,
+      "n": 32
+    },
+    "hardness_side_grain_n": {
+      "mean": 4950,
+      "std": 955,
+      "n": 40
+    }
+  },
+  {
+    "id": "S03",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Dahoma",
+    "species_botanical_name": "Piptadeniastrum africanum",
+    "origin": "Ghana",
+    "condition": "A.D.",
+    "notes": "Commercial supplies from Ghana, part kilned at BRE",
+    "moisture_content_pct": 11.4,
+    "density_12mc_kg_m3": 701,
+    "density_12mc_std": 82.5,
+    "density_12mc_n": 30,
+    "specific_gravity": {
+      "mean": 0.629,
+      "std": 0.074,
+      "n": 30
+    },
+    "static_bending_mor_mpa": {
+      "mean": 106,
+      "std": 32.0,
+      "n": 40
+    },
+    "static_bending_moe_mpa": {
+      "mean": 10900,
+      "std": 2930,
+      "n": 40
+    },
+    "compression_parallel_mpa": {
+      "mean": 57.1,
+      "std": 11.6,
+      "n": 29
+    },
+    "impact_drop_height_m": {
+      "mean": 0.768,
+      "std": 0.283,
+      "n": 24
+    },
+    "hardness_side_grain_n": {
+      "mean": 6430,
+      "std": 1480,
+      "n": 58
+    }
+  },
+  {
+    "id": "S04",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Gmelina",
+    "species_botanical_name": "Gmelina arborea",
+    "origin": "Ghana",
+    "condition": "A.D.",
+    "notes": "Commercial plantation-grown supplies from Ghana, part kilned at BRE",
+    "moisture_content_pct": 10.9,
+    "density_12mc_kg_m3": 486,
+    "density_12mc_std": 40.2,
+    "density_12mc_n": 40,
+    "specific_gravity": {
+      "mean": 0.438,
+      "std": 0.037,
+      "n": 40
+    },
+    "static_bending_mor_mpa": {
+      "mean": 73,
+      "std": 15.4,
+      "n": 40
+    },
+    "static_bending_moe_mpa": {
+      "mean": 8800,
+      "std": 1650,
+      "n": 40
+    },
+    "compression_parallel_mpa": {
+      "mean": 46.4,
+      "std": 7.63,
+      "n": 39
+    },
+    "impact_drop_height_m": {
+      "mean": 0.506,
+      "std": 0.142,
+      "n": 36
+    },
+    "hardness_side_grain_n": {
+      "mean": 2720,
+      "std": 598,
+      "n": 79
+    }
+  },
+  {
+    "id": "S05",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Hevea (rubberwood)",
+    "species_botanical_name": "Hevea brasiliensis",
+    "origin": "Malaysia",
+    "condition": "A.D.",
+    "notes": "Plantation timber from Malaysia; pre-dried and pre-treated against stain fungi",
+    "moisture_content_pct": 11.3,
+    "density_12mc_kg_m3": 691,
+    "density_12mc_std": 55.6,
+    "density_12mc_n": 42,
+    "specific_gravity": {
+      "mean": 0.62,
+      "std": 0.049,
+      "n": 42
+    },
+    "static_bending_mor_mpa": {
+      "mean": 101,
+      "std": 17.2,
+      "n": 39
+    },
+    "static_bending_moe_mpa": {
+      "mean": 10000,
+      "std": 1760,
+      "n": 39
+    },
+    "compression_parallel_mpa": {
+      "mean": 54.4,
+      "std": 6.4,
+      "n": 42
+    },
+    "impact_drop_height_m": {
+      "mean": 0.76,
+      "std": 0.123,
+      "n": 40
+    },
+    "hardness_side_grain_n": {
+      "mean": 6180,
+      "std": 804,
+      "n": 40
+    }
+  },
+  {
+    "id": "S06",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Kamarare",
+    "species_botanical_name": "Eucalyptus deglupta",
+    "origin": "Papua New Guinea",
+    "condition": "A.D.",
+    "notes": "Plantation timber from PNG; commercial supply, part kilned at BRE",
+    "moisture_content_pct": 13.3,
+    "density_12mc_kg_m3": 693,
+    "density_12mc_std": 78.4,
+    "density_12mc_n": 39,
+    "specific_gravity": {
+      "mean": 0.61,
+      "std": 0.068,
+      "n": 39
+    },
+    "static_bending_mor_mpa": {
+      "mean": 116,
+      "std": 13.7,
+      "n": 32
+    },
+    "static_bending_moe_mpa": {
+      "mean": 13100,
+      "std": 1780,
+      "n": 32
+    },
+    "compression_parallel_mpa": {
+      "mean": 63.1,
+      "std": 7.94,
+      "n": 39
+    },
+    "impact_drop_height_m": {
+      "mean": 1.02,
+      "std": 0.131,
+      "n": 30
+    },
+    "hardness_side_grain_n": {
+      "mean": 4450,
+      "std": 844,
+      "n": 34
+    }
+  },
+  {
+    "id": "S07",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Niové",
+    "species_botanical_name": "Staudtia stipitata",
+    "origin": "Ghana",
+    "condition": "A.D.",
+    "notes": "Lesser known timber from Ghana; commercial supply, part kilned at BRE",
+    "moisture_content_pct": 11.9,
+    "density_12mc_kg_m3": 911,
+    "density_12mc_std": 67.0,
+    "density_12mc_n": 39,
+    "specific_gravity": {
+      "mean": 0.82,
+      "std": 0.061,
+      "n": 39
+    },
+    "static_bending_mor_mpa": {
+      "mean": 177,
+      "std": 22.5,
+      "n": 40
+    },
+    "static_bending_moe_mpa": {
+      "mean": 16600,
+      "std": 1370,
+      "n": 40
+    },
+    "compression_parallel_mpa": {
+      "mean": 95.8,
+      "std": 13.64,
+      "n": 39
+    },
+    "impact_drop_height_m": {
+      "mean": 0.958,
+      "std": 0.166,
+      "n": 40
+    },
+    "hardness_side_grain_n": {
+      "mean": 10730,
+      "std": 1685,
+      "n": 40
+    }
+  },
+  {
+    "id": "S08",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Oak, American red",
+    "species_botanical_name": "Quercus spp. (rubra type)",
+    "origin": "North America",
+    "condition": "A.D.",
+    "notes": "Commercial supplies from N America; part kilned at BRE",
+    "moisture_content_pct": 10.1,
+    "density_12mc_kg_m3": 683,
+    "density_12mc_std": 50.0,
+    "density_12mc_n": 40,
+    "specific_gravity": {
+      "mean": 0.62,
+      "std": 0.044,
+      "n": 40
+    },
+    "static_bending_mor_mpa": {
+      "mean": 117,
+      "std": 13.7,
+      "n": 40
+    },
+    "static_bending_moe_mpa": {
+      "mean": 11600,
+      "std": 1500,
+      "n": 39
+    },
+    "compression_parallel_mpa": {
+      "mean": 65.1,
+      "std": 6.74,
+      "n": 40
+    },
+    "impact_drop_height_m": {
+      "mean": 1.1,
+      "std": 0.289,
+      "n": 40
+    },
+    "hardness_side_grain_n": {
+      "mean": 6380,
+      "std": 1100,
+      "n": 80
+    }
+  },
+  {
+    "id": "S09",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Taun",
+    "species_botanical_name": "Pometia pinnata",
+    "origin": "Solomon Islands",
+    "condition": "A.D.",
+    "notes": "Lesser known timber from Solomon Islands; part kilned at BRE",
+    "moisture_content_pct": 13.5,
+    "density_12mc_kg_m3": 773,
+    "density_12mc_std": 43.8,
+    "density_12mc_n": 33,
+    "specific_gravity": {
+      "mean": 0.68,
+      "std": 0.038,
+      "n": 33
+    },
+    "static_bending_mor_mpa": {
+      "mean": 121,
+      "std": 15.2,
+      "n": 35
+    },
+    "static_bending_moe_mpa": {
+      "mean": 13300,
+      "std": 1800,
+      "n": 35
+    },
+    "compression_parallel_mpa": {
+      "mean": 61.3,
+      "std": 6.13,
+      "n": 33
+    },
+    "impact_drop_height_m": {
+      "mean": 1.1,
+      "std": 0.187,
+      "n": 37
+    },
+    "hardness_side_grain_n": {
+      "mean": 7600,
+      "std": 898,
+      "n": 40
+    }
+  },
+  {
+    "id": "S10",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Teak, plantation (Ghana)",
+    "species_botanical_name": "Tectona grandis",
+    "origin": "Ghana",
+    "condition": "A.D.",
+    "notes": "Plantation timber from Ghana; supplied green, fully kilned at BRE",
+    "moisture_content_pct": 10.8,
+    "density_12mc_kg_m3": 657,
+    "density_12mc_std": 48.7,
+    "density_12mc_n": 35,
+    "specific_gravity": {
+      "mean": 0.59,
+      "std": 0.047,
+      "n": 35
+    },
+    "static_bending_mor_mpa": {
+      "mean": 118,
+      "std": 14.0,
+      "n": 39
+    },
+    "static_bending_moe_mpa": {
+      "mean": 11700,
+      "std": 1440,
+      "n": 39
+    },
+    "compression_parallel_mpa": {
+      "mean": 66.8,
+      "std": 8.55,
+      "n": 35
+    },
+    "impact_drop_height_m": {
+      "mean": 0.81,
+      "std": 0.117,
+      "n": 39
+    },
+    "hardness_side_grain_n": {
+      "mean": 5490,
+      "std": 910,
+      "n": 40
+    }
+  },
+  {
+    "id": "S11",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Teak, plantation (Tanzania)",
+    "species_botanical_name": "Tectona grandis",
+    "origin": "Tanzania",
+    "condition": "A.D.",
+    "notes": "Supplied directly from Tanzanian plantations; part kilned at BRE",
+    "moisture_content_pct": 11.3,
+    "density_12mc_kg_m3": 633,
+    "density_12mc_std": 40.8,
+    "density_12mc_n": 45,
+    "specific_gravity": {
+      "mean": 0.57,
+      "std": 0.036,
+      "n": 45
+    },
+    "static_bending_mor_mpa": {
+      "mean": 110,
+      "std": 20.2,
+      "n": 40
+    },
+    "static_bending_moe_mpa": {
+      "mean": 11400,
+      "std": 1180,
+      "n": 40
+    },
+    "compression_parallel_mpa": {
+      "mean": 63.5,
+      "std": 6.0,
+      "n": 45
+    },
+    "impact_drop_height_m": {
+      "mean": 0.712,
+      "std": 0.098,
+      "n": 40
+    },
+    "hardness_side_grain_n": {
+      "mean": 4610,
+      "std": 713,
+      "n": 78
+    }
+  },
+  {
+    "id": "S12",
+    "source": "Maun & Coday (1997) Supplement",
+    "class": "Hardwoods",
+    "species_common_name": "Vitex",
+    "species_botanical_name": "Vitex cofassus",
+    "origin": "Papua New Guinea",
+    "condition": "A.D.",
+    "notes": "Lesser known species from PNG; commercial supply, part kilned at BRE",
+    "moisture_content_pct": 10.3,
+    "density_12mc_kg_m3": 773,
+    "density_12mc_std": 86.1,
+    "density_12mc_n": 19,
+    "specific_gravity": {
+      "mean": 0.701,
+      "std": 0.079,
+      "n": 19
+    },
+    "static_bending_mor_mpa": {
+      "mean": 124,
+      "std": 23.4,
+      "n": 30
+    },
+    "static_bending_moe_mpa": {
+      "mean": 12000,
+      "std": 1520,
+      "n": 30
+    },
+    "compression_parallel_mpa": {
+      "mean": 74.3,
+      "std": 8.33,
+      "n": 19
+    },
+    "impact_drop_height_m": {
+      "mean": 0.737,
+      "std": 0.254,
+      "n": 12
+    },
+    "hardness_side_grain_n": {
+      "mean": 6760,
+      "std": 1450,
+      "n": 60
+    }
+  }
+]
