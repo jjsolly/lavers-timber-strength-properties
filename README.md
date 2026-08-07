@@ -37,7 +37,8 @@ This repository digitizes two primary technical publications from the Building R
 ├── index.html                           # Standalone static web application (HTML/CSS/JS + Chart.js)
 ├── master_lavers_1983.json              # 1983 Master Dataset (435 records)
 ├── maun_1997_supplement.json            # 1997 Supplement Dataset (12 records)
-├── combined_lavers_maun_dataset.json    # Complete Combined Dataset with dataset_source metadata (447 records)
+├── combined_lavers_maun_dataset.json    # Complete Combined JSON Dataset with dataset_source metadata (447 records)
+├── combined_lavers_maun_dataset.csv     # Complete Combined CSV Dataset with all properties (447 records)
 ├── create_dashboard.py                  # Python generator script for index.html
 └── README.md                            # Documentation & deployment guide
 ```
