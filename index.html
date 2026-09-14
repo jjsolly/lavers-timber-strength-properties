@@ -92,8 +92,6 @@
       --text-main: #f4f4f5;
       --text-muted: #a1a1aa;
       --text-dim: #71717a;
-      --accent-orange: rgb(255, 140, 0); /* Reserved for small subtle highlights */
-      --accent-orange-muted: rgba(255, 140, 0, 0.15);
       --radius-lg: 8px;
       --radius-md: 6px;
     }
@@ -120,7 +118,7 @@
       margin: 0 auto;
     }
 
-    /* Typography: Minimal Work Sans */
+    /* Typography: Pure Work Sans */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Work Sans', sans-serif;
       font-weight: 500;
@@ -128,7 +126,7 @@
       letter-spacing: -0.01em;
     }
 
-    /* Header - Minimal Monochrome */
+    /* Header - Pure Monochrome */
     header {
       text-align: left;
       margin-bottom: 2rem;
@@ -163,7 +161,7 @@
       font-weight: 300;
     }
 
-    /* Intro / About Data Card - Minimal Grey Border */
+    /* Intro / About Data Card - Clean Grey Border */
     .about-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -217,17 +215,17 @@
     }
 
     .source-link {
-      color: var(--accent-orange);
-      text-decoration: none;
+      color: #ffffff;
+      text-decoration: underline;
       font-weight: 400;
-      transition: opacity 0.2s;
+      transition: color 0.2s;
     }
 
     .source-link:hover {
-      text-decoration: underline;
+      color: var(--text-muted);
     }
 
-    /* View Switcher Tabs - Clean Monochromatic Buttons */
+    /* View Switcher Tabs - Pure Monochrome */
     .tabs-nav {
       display: flex;
       justify-content: flex-start;
@@ -263,7 +261,7 @@
       border-color: #ffffff;
     }
 
-    /* Summary Stats Grid - Minimal 3 Cards */
+    /* Summary Stats Grid - Minimal Cards */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -299,10 +297,6 @@
       color: #ffffff;
     }
 
-    .stat-value.orange-accent {
-      color: var(--accent-orange);
-    }
-
     .stat-sub {
       font-size: 0.8rem;
       color: var(--text-dim);
@@ -310,7 +304,7 @@
       font-weight: 300;
     }
 
-    /* Control Panel - Minimal Layout */
+    /* Control Panel - Minimal Monochrome Layout */
     .control-panel {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -362,20 +356,9 @@
     }
 
     .btn-download:hover {
-      background: #27272a;
-      border-color: var(--card-border-hover);
-    }
-
-    .btn-download-csv {
-      border-color: rgba(255, 140, 0, 0.4);
-      color: var(--accent-orange);
-      background: rgba(255, 140, 0, 0.08);
-    }
-
-    .btn-download-csv:hover {
-      background: var(--accent-orange);
+      background: #ffffff;
       color: #000000;
-      border-color: var(--accent-orange);
+      border-color: #ffffff;
     }
 
     .search-row {
@@ -488,9 +471,9 @@
     }
 
     .btn-toggle-vectors.active {
-      background: rgba(255, 140, 0, 0.15);
-      border-color: var(--accent-orange);
-      color: var(--accent-orange);
+      background: #ffffff;
+      border-color: #ffffff;
+      color: #000000;
       font-weight: 500;
     }
 
@@ -529,7 +512,7 @@
 
     th {
       background: #09090b;
-      color: #ffffff; /* Crisp White Heading */
+      color: #ffffff;
       font-family: 'Work Sans', sans-serif;
       font-weight: 500;
       padding: 0.9rem 0.85rem;
@@ -614,7 +597,7 @@
       cursor: pointer;
     }
 
-    /* Minimal Monochromatic Badges */
+    /* Monochromatic Badges */
     .badge {
       display: inline-block;
       padding: 0.15rem 0.55rem;
@@ -630,9 +613,9 @@
     }
 
     .badge-hardwood {
-      background: rgba(255, 140, 0, 0.12);
-      color: var(--accent-orange);
-      border: 1px solid rgba(255, 140, 0, 0.3);
+      background: #27272a;
+      color: #e4e4e7;
+      border: 1px solid #52525b;
     }
 
     .badge-green {
@@ -642,9 +625,9 @@
     }
 
     .badge-ad {
-      background: rgba(255, 140, 0, 0.08);
-      color: #ffb86c;
-      border: 1px solid rgba(255, 140, 0, 0.25);
+      background: #27272a;
+      color: #ffffff;
+      border: 1px solid #3f3f46;
     }
 
     .badge-source-1983 {
@@ -654,9 +637,9 @@
     }
 
     .badge-source-1997 {
-      background: rgba(59, 130, 246, 0.12);
-      color: #60a5fa;
-      border: 1px solid rgba(59, 130, 246, 0.3);
+      background: #27272a;
+      color: #ffffff;
+      border: 1px solid #3f3f46;
     }
 
     .btn-detail {
@@ -862,7 +845,7 @@
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-label">Total Test Records</div>
-        <div class="stat-value orange-accent" id="stat-total-records">447</div>
+        <div class="stat-value" id="stat-total-records">447</div>
         <div class="stat-sub">435 Records (1983 Lavers) + 12 Records (1997 Maun)</div>
       </div>
       <div class="stat-card">
@@ -872,7 +855,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">Primary BRE Publications</div>
-        <div class="stat-value orange-accent">2 Reports</div>
+        <div class="stat-value">2 Reports</div>
         <div class="stat-sub">1983 Master (BR 241) & 1997 Supplement (BR 329)</div>
       </div>
     </div>
@@ -891,7 +874,7 @@
             </svg>
             Download Filtered JSON
           </button>
-          <button class="btn-download btn-download-csv" onclick="downloadFilteredCSV()">
+          <button class="btn-download" onclick="downloadFilteredCSV()">
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
             </svg>
@@ -1098,7 +1081,7 @@
               const pixelY2 = chart.scales.y.getPixelForValue(yAD);
 
               const isSoftwood = g.green.class.includes('Softwood');
-              ctx.strokeStyle = isSoftwood ? 'rgba(255, 255, 255, 0.35)' : 'rgba(255, 140, 0, 0.45)';
+              ctx.strokeStyle = isSoftwood ? 'rgba(255, 255, 255, 0.4)' : 'rgba(161, 161, 170, 0.5)';
               ctx.setLineDash([3, 3]); // Dashed line vector
 
               ctx.beginPath();
@@ -1361,28 +1344,28 @@
             {
               label: 'Softwoods (Air-Dried ●)',
               data: softwoodsAD,
-              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
               borderColor: '#ffffff',
               pointStyle: 'circle',
               pointRadius: 5,
               pointHoverRadius: 9,
-              pointHoverBackgroundColor: 'rgb(255, 140, 0)'
+              pointHoverBackgroundColor: '#ffffff'
             },
             {
               label: 'Softwoods (Green ▲)',
               data: softwoodsGreen,
-              backgroundColor: 'rgba(255, 255, 255, 0.65)',
+              backgroundColor: 'rgba(255, 255, 255, 0.55)',
               borderColor: '#ffffff',
               pointStyle: 'triangle',
               pointRadius: 7,
               pointHoverRadius: 11,
-              pointHoverBackgroundColor: 'rgb(255, 140, 0)'
+              pointHoverBackgroundColor: '#ffffff'
             },
             {
               label: 'Hardwoods (Air-Dried ●)',
               data: hardwoodsAD,
-              backgroundColor: 'rgba(255, 140, 0, 0.9)',
-              borderColor: 'rgb(255, 140, 0)',
+              backgroundColor: 'rgba(161, 161, 170, 0.95)',
+              borderColor: '#a1a1aa',
               pointStyle: 'circle',
               pointRadius: 5,
               pointHoverRadius: 9,
@@ -1391,8 +1374,8 @@
             {
               label: 'Hardwoods (Green ▲)',
               data: hardwoodsGreen,
-              backgroundColor: 'rgba(255, 140, 0, 0.65)',
-              borderColor: 'rgb(255, 140, 0)',
+              backgroundColor: 'rgba(161, 161, 170, 0.55)',
+              borderColor: '#a1a1aa',
               pointStyle: 'triangle',
               pointRadius: 7,
               pointHoverRadius: 11,
